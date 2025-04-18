@@ -1,0 +1,353 @@
+/* Base Styles */
+:root {
+    --primary: #FF9100; /* Vibrant orange from bubble burst */
+    --primary-dark: #F27200; /* Darker orange */
+    --text: #000000; /* White text for better contrast on blue */
+    --text-light: #B4E2FF; /* Light blue text */
+    --border: #80CCF2; /* Light blue borders */
+    --bg-light: #26A5DE; /* Lighter blue */
+    --white: #FFFFFF;
+    --error: #FF6B6B; /* Bright red */
+    --success: #38A169;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --radius: 12px; /* More rounded corners */
+    --accent: #FFDD00; /* Yellow accent from outfit */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #0091CE; /* Bright blue background */
+    background-image: radial-gradient(circle at 25% 10%, var(--bg-light) 0%, #0091CE 50%);
+}
+
+/* Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ticket-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.back-button {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Progress Steps */
+.progress-container {
+    margin-bottom: 30px;
+}
+
+.payment-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 20px;
+}
+
+.payment-steps::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: var(--border);
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-light);
+    font-weight: 500;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.step::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 2px solid #0091CE;
+}
+
+.step.active {
+    color: var(--accent);
+}
+
+.step.active::before {
+    background: var(--primary);
+    color: white;
+}
+
+/* Order Summary */
+.order-summary-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.order-summary-card h4 {
+    margin-top: 0;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.ticket-items {
+    margin: 15px 0;
+}
+
+.ticket-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 2px solid var(--border);
+    color: var(--accent);
+}
+
+/* Form Styles */
+.ticket-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+}
+
+.required-note {
+    color: var(--text-light);
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.name-fields {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 16px;
+    color: var(--text);
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(255, 221, 0, 0.3);
+}
+
+.input-with-prefix {
+    display: flex;
+    align-items: center;
+}
+
+.prefix {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
+    border-right: none;
+    border-radius: var(--radius) 0 0 var(--radius);
+    color: var(--text);
+}
+
+.input-with-prefix input {
+    border-radius: 0 var(--radius) var(--radius) 0 !important;
+}
+
+.error-message {
+    color: var(--error);
+    font-size: 0.8em;
+    margin-top: 5px;
+    height: 18px;
+}
+
+/* Payment Methods */
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-method {
+    flex: 1;
+    min-width: 150px;
+}
+
+.payment-method input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.payment-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.payment-method input[type="radio"]:checked + .payment-label {
+    border-color: var(--accent);
+    background-color: rgba(255, 145, 0, 0.2);
+}
+
+.payment-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1); /* Make icons white */
+}
+
+.mobile-money-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='2' width='14' height='20' rx='2' ry='2'/%3E%3Cline x1='12' y1='18' x2='12' y2='18'/%3E%3Cpath d='M8 2v4h8V2M9 10h6M9 14h6'/%3E%3C/svg%3E");
+}
+
+.card-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='1' y='4' width='22' height='16' rx='2' ry='2'/%3E%3Cline x1='1' y1='10' x2='23' y2='10'/%3E%3C/svg%3E");
+}
+
+.bank-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E");
+}
+
+.payment-details {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.card-extra-details {
+    display: flex;
+    gap: 15px;
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: #2D3748; /* Dark text on yellow button */
+    box-shadow: 0 4px 0 var(--primary-dark);
+}
+
+.primary-btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--primary-dark);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 0 var(--primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .name-fields, .card-extra-details {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .payment-steps {
+        padding: 0 10px;
+    }
+    
+    .step {
+        font-size: 0.8em;
+    }
+    
+    .step::before {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .payment-methods {
+        flex-direction: column;
+    }
+}

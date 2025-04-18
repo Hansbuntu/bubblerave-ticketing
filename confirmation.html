@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Confirmed | Bubble Rave 2025</title>
+    <link rel="stylesheet" href="css/confirmation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="confetti-container" id="confetti-container"></div>
+    
+    <div class="confirmation-container">
+        <div class="success-animation">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        
+        <h1>Payment Successful!</h1>
+        <p class="success-message">Your ticket purchase for Bubble Rave 2025 has been confirmed!</p>
+        
+        <div class="order-details">
+            <h2>Order Details</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span class="detail-label">Order ID</span>
+                    <span class="detail-value" id="order-id">AF123456</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Transaction ID</span>
+                    <span class="detail-value" id="trans-id">MTN23456789</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Purchase Date</span>
+                    <span class="detail-value" id="purchase-date">April 17, 2025</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Payment Method</span>
+                    <span class="detail-value" id="payment-method">Mobile Money (MTN)</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ticket-summary">
+            <h2>Ticket Summary</h2>
+            <div class="ticket-items" id="ticket-items">
+                <!-- Will be populated by JavaScript -->
+                <div class="ticket-item">
+                    <div class="ticket-info">
+                        <span class="ticket-name">General Admission</span>
+                        <span class="ticket-qty">2 tickets</span>
+                    </div>
+                    <span class="ticket-price">140 GHC</span>
+                </div>
+            </div>
+            <div class="total-row">
+                <span>Total Amount</span>
+                <span id="total-amount" class="total-amount">140 GHC</span>
+            </div>
+        </div>
+        
+        <div class="event-info">
+            <h2>Event Details</h2>
+            <div class="event-details">
+                <div class="event-detail">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <strong>Date & Time</strong>
+                        <p>April 26, 2025 | 2:00 PM</p>
+                    </div>
+                </div>
+                <div class="event-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Location</strong>
+                        <p>Offline lounge, Osu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <p>Your e-ticket has been sent to your email and phone number</p>
+            <div class="action-buttons">
+                <button id="download-ticket" class="primary-btn">
+                    <i class="fas fa-download"></i> Download Ticket
+                </button>
+                <button id="add-to-calendar" class="secondary-btn">
+                    <i class="fas fa-calendar-plus"></i> Add to Calendar
+                </button>
+            </div>
+        </div>
+        
+        <div class="share-section">
+            <p>Share this event with friends</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <a href="index.html" class="home-link">
+            <i class="fas fa-arrow-left"></i> Back to Event Page
+        </a>
+    </div>
+
+    <script src="scripts/confirmation.js"></script>
+</body>
+</html>

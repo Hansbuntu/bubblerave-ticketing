@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Tickets | AfroFest 2024</title>
+    <link rel="stylesheet" href="css/tickets.css">
+</head>
+<body>
+    <header class="ticket-header">
+        <a href="index.html" class="back-button">← Back to Event</a>
+        <h1>Select Tickets</h1>
+    </header>
+    
+    <main class="container">
+        <div class="progress-container">
+            <div class="payment-steps">
+                <div class="step active" data-step="1">Select Tickets</div>
+                <div class="step" data-step="2">Your Details</div>
+                <div class="step" data-step="3">Payment</div>
+            </div>
+        </div>
+
+        <div class="order-summary-card" id="order-summary">
+            <h4>Your Selection</h4>
+            <div id="ticket-selection-display" class="ticket-items"></div>
+            <div class="total-amount">
+                <span>Total</span>
+                <span id="order-total">0 GHC</span>
+            </div>
+        </div>
+    
+        <div class="payment-step active" id="step-1">
+            <div class="ticket-options">
+                <div class="ticket-card" data-type="early-bird">
+                    <div class="ticket-header">
+                        <h3>Early Bird</h3>
+                        <p class="price">70 GHC</p>
+                    </div>
+                    <p class="ticket-description">Access to all main stage performances</p>
+                    
+                    <div class="form-group">
+                        <label for="early-bird-qty">Quantity:</label>
+                        <div class="quantity-selector">
+                            <button class="qty-minus">-</button>
+                            <input type="number" id="early-bird-qty" min="1" max="10" value="1">
+                            <button class="qty-plus">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="action-buttons">
+                <button type="button" class="btn primary-btn" id="to-details">
+                    Proceed to Details
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts\ticket.js" type="module"></script>
+</body>
+</html>

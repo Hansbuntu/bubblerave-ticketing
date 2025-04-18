@@ -1,0 +1,205 @@
+/* ===== Core Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f8f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Header Styles ===== */
+.hero-header {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: linear-gradient(135deg, #0066CC 0%, #004D99 100%);
+}
+
+.logo-container {
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.event-logo {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+/* ===== Main Container ===== */
+.event-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ===== Flyer Image Only ===== */
+.flyer-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 3px solid #FF6B00;
+}
+
+.event-flyer {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Separate Content Section ===== */
+.event-content {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 1050px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.event-title {
+    color: #0066CC;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.event-date {
+    color: #FF6B00;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.event-details {
+    margin: 2rem 0;
+}
+
+.event-details h3 {
+    color: #0066CC;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.event-details ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.event-details li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.event-details li:last-child {
+    border-bottom: none;
+}
+
+/* ===== CTA Button ===== */
+.cta-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 2rem auto;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, #FF6B00 0%, #FF8C00 100%);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255,107,0,0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255,107,0,0.4);
+}
+
+.help-text {
+    text-align: center;
+    color: #666;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .event-container {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .event-title {
+        font-size: 2rem;
+    }
+    
+    .event-date {
+        font-size: 1.25rem;
+    }
+    
+    .event-details li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .flyer-container {
+        border-width: 2px;
+        border-radius: 12px;
+    }
+    
+    .event-content {
+        padding: 1.5rem;
+    }
+    
+    .event-title {
+        font-size: 1.8rem;
+    }
+    
+    .event-date {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
