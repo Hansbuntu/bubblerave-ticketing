@@ -20,25 +20,32 @@ body {
 .hero-header {
     text-align: center;
     padding: 1.5rem 0;
-    background: linear-gradient(135deg, #0066CC 0%, #004D99 100%);
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.6) 0%, rgba(0, 77, 153, 0.6) 100%), url('../images/header-bg.jpg');
+    background-size: cover;
+    background-position: 200% center;
+    position: relative;
 }
 
 .logo-container {
-    max-width: 150px;
+    max-width: 80px;
     margin: 0 auto;
-    padding: 0.5rem;
-    background: rgba(255,255,255,0.9);
+    padding: 0.3rem;
+    background: rgba(255,255,255,0.95);
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
 }
 
 .event-logo {
     width: 100%;
-    height: auto;
-    padding: 10px;
+    height: 100%;
+    padding: 1px;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transform: scale(1.76);
+    object-fit: cover;
+    object-position: center;
 }
-
 /* ===== Main Container ===== */
 .event-container {
     display: flex;
